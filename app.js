@@ -69,20 +69,23 @@ let friendArray = ["Snoopy", "Garfield", "Felix", "Tom", "Jerry", "Pluto", "Yogi
 let friendCounter = 0
 
 sixbutton.addEventListener("click", () => {
-    if (friendCounter < friendArray.length) {
-        let
+    if (friendCounter < friendArr.length) {
+        const newLi = document.createElement("li");
+        newLi.textContent = friendArr[friendCounter];
+        num6Ul.appendChild(newLi);
+
+        friendCounter++
+    } else {
+        num6Btn.disabled = "true";
     }
 
 
 
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',' + r().toFixed(1) + ')';
+
 
 }
 
-
-
-
-
-
-
-
-
+});
